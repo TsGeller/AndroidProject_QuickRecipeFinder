@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SearchRecipe">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:backgroundTint="#FBF8F8">
+
+        <EditText
+            android:id="@+id/form"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="#DDC6C6"
+            android:backgroundTint="#FDFCFC"
+            android:hint="@string/hint_form"
+            android:textColor="#0B0A0A"
+            android:textColorHint="#292727"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:alpha="0.5" />
+
+        <Button
+            android:id="@+id/searchRecipes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/search"
+            app:layout_constraintEnd_toEndOf="@id/form"
+            app:layout_constraintStart_toStartOf="@id/form"
+            app:layout_constraintTop_toBottomOf="@id/form" />
+
+        <Button
+            android:id="@+id/backMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchRecipes"
+            app:layout_constraintVertical_bias="0.969" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recipe_list"
+            android:layout_width="409dp"
+            android:layout_height="545dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/backMain"
+            app:layout_constraintTop_toBottomOf="@+id/searchRecipes"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="1dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

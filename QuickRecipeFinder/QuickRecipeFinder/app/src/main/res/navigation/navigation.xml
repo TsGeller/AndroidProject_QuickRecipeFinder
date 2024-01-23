@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/about_Fragment">
+    <fragment
+        android:id="@+id/about_Fragment"
+        android:name="com.example.g55085_android_projet.FragmentStart"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_about_Fragment_to_searchRecipe"
+            app:destination="@id/searchRecipe" />
+        <action
+            android:id="@+id/action_about_Fragment_to_aboutDev"
+            app:destination="@id/aboutDev" />
+        <action
+            android:id="@+id/action_about_Fragment_to_favorites2"
+            app:destination="@id/favorites" />
+        <action
+            android:id="@+id/action_about_Fragment_to_aboutDev2"
+            app:destination="@id/aboutDev" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutDev"
+        android:name="com.example.g55085_android_projet.AboutDev"
+        android:label="@string/devInfo"
+        tools:layout="@layout/fragment_about_dev" />
+    <fragment
+        android:id="@+id/searchRecipe"
+        android:name="com.example.g55085_android_projet.SearchRecipe"
+        android:label="@string/searchRecipe"
+        tools:layout="@layout/fragment_search_recipe">
+        <action
+            android:id="@+id/action_searchRecipe_to_about_Fragment"
+            app:destination="@id/about_Fragment" />
+        <action
+            android:id="@+id/action_searchRecipe_to_showRecipe"
+            app:destination="@id/showRecipe" />
+    </fragment>
+    <fragment
+        android:id="@+id/favorites"
+        android:name="com.example.g55085_android_projet.favorites.Favorites"
+        android:label="@string/favoritesName"
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/action_favorites2_to_about_Fragment"
+            app:destination="@id/about_Fragment" />
+        <action
+            android:id="@+id/action_favorites_to_showRecipe"
+            app:destination="@id/showRecipe" />
+    </fragment>
+    <fragment
+        android:id="@+id/showRecipe"
+        android:name="com.example.g55085_android_projet.ShowRecipe.ShowRecipe"
+        android:label="@string/ShowRecipe"
+        tools:layout="@layout/fragment_show_recipe">
+        <action
+            android:id="@+id/action_showRecipe_to_searchRecipe"
+            app:destination="@id/searchRecipe" />
+        <action
+            android:id="@+id/action_showRecipe_to_favorites"
+            app:destination="@id/favorites" />
+    </fragment>
+</navigation>

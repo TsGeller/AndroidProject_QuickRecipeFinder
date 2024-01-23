@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">QuickRecipeFinder</string>
+    <string name="devInfo">About</string>
+    <string name="search">Search</string>
+    <string name="searchRecipe">Search Recipe</string>
+    <string name="FavoritesListe">List of favorite recipes</string>
+    <string name="favoritesName">Favorites</string>
+    <string name="random">Random</string>
+    <string name="Infos">Info</string>
+    <string name="enter">Enter ingredients</string>
+    <string name="hint_form">Enter Ingredients like this: milk honey fries</string>
+    <string name="back">Back</string>
+    <string name="ShowRecipe">Show Recipe</string>
+    <string name="request_failed">Request failed, please connect to the internet</string>
+    <string name="wrong_request">Enter correct ingredients</string>
+    <string name="ajouter">Add</string>
+    <string name="supprimer">Delete</string>
+    <string name="listIngredients">List of ingredients</string>
+    <string name="navDrawer_menu">About</string>
+    <string name="About_dev">Recipe search application based on entered ingredients, by Thomas Geller 55085</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="string_vide">Please enter ingredients</string>
+    <string name="listEmpty">Please try again, the list of ingredients contains a spelling error</string>
+    <string name="instruction">Instruction</string>
+</resources>

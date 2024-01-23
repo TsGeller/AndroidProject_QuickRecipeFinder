@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="RecipeDto"
+            type="com.example.g55085_android_projet.retrofit.RecipeDto" />
+        <variable
+            name="clickListener"
+            type="com.example.g55085_android_projet.searchRecipe.RecipeDtoListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="304dp"
+        android:onClick="@{() -> clickListener.onClick(RecipeDto)}">
+
+        <ImageView
+            android:id="@+id/quality_image"
+            android:layout_width="203dp"
+            android:layout_height="129dp"
+            android:elevation="4dp"
+
+            android:padding="8dp"
+            android:scaleType="centerCrop"
+            app:getImageOfRecipe="@{RecipeDto}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.38"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_recipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:ellipsize="end"
+            android:padding="8dp"
+
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/quality_image"
+            app:recipeId="@{RecipeDto}" />
+
+        <TextView
+            android:id="@+id/used_ingredients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_recipe"
+            app:recipeUsedIngredients="@{RecipeDto}"
+            tools:text="Excellent!!!" />
+
+        <TextView
+            android:id="@+id/missingIngredients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:ellipsize="end"
+            android:padding="8dp"
+            android:text="TextView"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/used_ingredients"
+            app:layout_constraintVertical_bias="0.0"
+            app:recipeMissingIngredients="@{RecipeDto}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
